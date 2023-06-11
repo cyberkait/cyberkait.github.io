@@ -91,14 +91,14 @@ function switchTurn() {
     // Increments turn number. Used to manage whose turn it is and to skip/reverse.
     clearRender(players[turn]);
     turn += move;
-    alert("it's " + players[turn].name + "'s turn!");
     if (turn == players.length) {
         turn = 0;
     }// End if.
     else if (turn == -1) {
         let n = players.length - 1;
         turn = n;
-    } // End else.
+    } // End else if.
+    alert("it's " + players[turn].name + "'s turn!");
     renderHeader();
     render(players[turn], "hand-el");
 } // End function.
